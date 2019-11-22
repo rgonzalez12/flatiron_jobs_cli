@@ -3,7 +3,7 @@ class Jobs
   attr_reader :id, :absolute_url
   @@all = []
 
-  def initialize(id, title, location, content, absolute_url, departments, offices)
+  def initialize(id:, title:, location:, content:, absolute_url:, departments:, offices:)
     @id = id
     @title = title
     @location = location
@@ -17,9 +17,4 @@ class Jobs
   def self.all
     @@all
   end
-  
-  def self.list_attributes
-  end
-
-
 end
