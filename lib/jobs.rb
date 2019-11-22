@@ -17,6 +17,9 @@ class Jobs
   def self.all
     @@all
   end
+  
+  def self.list_attributes
+  end
 
 
 end
