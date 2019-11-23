@@ -1,5 +1,5 @@
-class JobsController
-  def initialize(api = "./lib/api.rb")
+class JobsBoard
+  def initialize(api="./lib/api.rb")
     api.new(api)
   end
 
