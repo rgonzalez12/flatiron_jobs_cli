@@ -30,6 +30,7 @@ class FlatironJobsCliProject::JobsBoard
       end
     end
   end
+  
 
   def offices
     puts "Please enter the office you wish to view."

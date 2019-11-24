@@ -37,6 +37,7 @@ DEPENDENCIES
   bundler (~> 2.0)
   flatiron_jobs_cli_project!
   greenhouse_io
+  httparty
   pry (~> 0.10.3)
   rake (~> 10.0)
 
