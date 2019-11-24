@@ -1,4 +1,4 @@
-class FlatironJobsCliProject::JobsBoard
+class JobsBoard
   def initialize
   end
 

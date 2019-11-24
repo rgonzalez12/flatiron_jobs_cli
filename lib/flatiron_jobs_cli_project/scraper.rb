@@ -1,6 +1,6 @@
-class FlatironJobsCliProject::Scraper
+class Scraper
   
-  def self.jobs_call
+  def self.all_jobs_call
   https://boards-api.greenhouse.io/v1/boards/flatironschoolcareers/jobs
   end
   

@@ -1,4 +1,4 @@
-class FlatironJobsCliProject::JobPost
+class JobPost
   attr_accessor :title, :location, :content, :departments, :offices
   attr_reader :id, :absolute_url
   @@all = []
