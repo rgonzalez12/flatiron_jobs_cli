@@ -1,4 +1,4 @@
-class FlatiornJobsCliProject::JobsBoard
+class FlatironJobsCliProject::JobsBoard
   def initialize(api = "./lib/flatiron_jobs_cli_project/api.rb")
     API.new(api)
   end
