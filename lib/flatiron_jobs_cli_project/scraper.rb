@@ -1,7 +1,15 @@
 class Scraper
   
   def self.all_jobs_call
-  https://boards-api.greenhouse.io/v1/boards/flatironschoolcareers/jobs
+   url = "https://boards-api.greenhouse.io/v1/boards/flatironschoolcareers/jobs"
+    response = HTTParty.get(url)
+    response["absolute_url"]["location"]["metadata"]["id"]["title"].each do |job|
+      absolute_url = job["absolute_url"]
+      location = job["location"]
+      metadata = job["metadata"]
+      id = job["id"]
+      title = job["title"]
+    end
   end
   
   def self.offices_call

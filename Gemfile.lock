@@ -38,7 +38,7 @@ DEPENDENCIES
   flatiron_jobs_cli_project!
   greenhouse_io
   httparty
-  pry (~> 0.10.3)
+  pry
   rake (~> 10.0)
 
 BUNDLED WITH
