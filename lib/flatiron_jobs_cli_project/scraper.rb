@@ -28,6 +28,10 @@ class Scraper
     response["departments"].each do |department|
       id = department["id"]
       name = department["name"]
+      jobs = department["jobs"]
+      absolute_url = department["absolute_url"]
+      location = department["location"]
+      metadata = department["metadata"]
     end
   end
   
