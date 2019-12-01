@@ -11,7 +11,7 @@ class API
     end
   end
   
-  def fetch_job_info
+  def job_info
     url =""
     response = HTTParty.get(url)
     response.each do |job|
