@@ -3,8 +3,9 @@ class JobsBoard
   end
 
   def run_program
+    binding.pry
     ui = ""
-
+    
     while ui != "exit"
       puts "Welcome to Flatiron School's Careers Page!"
       sleep(3)

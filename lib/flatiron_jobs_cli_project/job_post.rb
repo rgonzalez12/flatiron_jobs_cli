@@ -1,9 +1,9 @@
 class JobPost
-  attr_accessor :title, :location, :content, :departments, :offices
+  attr_accessor :title, :location, :content
   attr_reader :id, :absolute_url
   @@all = []
 
-  def initialize(id:, title:, location:, content:, absolute_url:, departments:, offices:)
+  def initialize(id:, title:, location:, content:, absolute_url:)
     @id = id
     @title = title
     @location = location
