@@ -1,37 +1,24 @@
-class Scraper
+class API
   
-  def all_jobs_call
+  def fetch
     url = "https://boards-api.greenhouse.io/v1/boards/flatironschoolcareers/jobs"
     response = HTTParty.get(url)
     response["jobs"].each do |job|
-      absolute_url = job["absolute_url"]
-      location = job["location"]
-      metadata = job["metadata"]
-      id = job["id"]
-      title = job["title"]
+      puts job["absolute_url"]
+      puts job["location"]
+      puts job["id"]
+      puts job["title"]
     end
   end
   
-  def offices_call
-    url = "https://boards-api.greenhouse.io/v1/boards/flatironschoolcareers/offices"
+  def fetch_job_info
+    url =""
     response = HTTParty.get(url)
-    response["offices"].each do |office|
-      name = office["name"]
-      location = office["location"]
-      id = office["id"]
-    end
-  end
-
-  def departments_call
-    url = "https://boards-api.greenhouse.io/v1/boards/flatironschoolcareers/departments"
-    response = HTTParty.get(url)
-    response["departments"].each do |department|
-      id = department["id"]
-      name = department["name"]
-      jobs = department["jobs"]
-      absolute_url = department["absolute_url"]
-      location = department["location"]
-      metadata = department["metadata"]
+    response.each do |job|
+      absolute_url = job["absolute_url"]
+      location = job["location"]
+      title = job["title"]
+      content = job["content"]
     end
   end
   
