@@ -3,7 +3,6 @@ class JobsBoard
   end
 
   def run_program
-    binding.pry
     ui = ""
     
     while ui != "exit"
@@ -35,5 +34,9 @@ class JobsBoard
     puts "#{jobs.title} - #{jobs.location} - #{jobs.departments} - #{jobs.offices} - #{jobs.content}. Copy and paste the link below to apply! #{jobs.absolute_url}"
     
     #logic to pull job from api displaying info and link to apply
+  end
+  
+  def job_info
+    #lists info from the specific jobs
   end
 end

@@ -9,8 +9,6 @@ class JobPost
     @location = location
     @content = content
     @absolute_url = absolute_url
-    @departments = departments
-    @offices = offices
     @@all << self
   end
 
