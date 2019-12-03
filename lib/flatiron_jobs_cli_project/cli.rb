@@ -18,8 +18,6 @@ class JobsBoard
       puts "To see all the current openings, type 'list jobs'."
       sleep(0.5)
       puts "You can also close the program by typing 'exit'."
-      sleep(0.5)
-      puts "What would you like to do?"
 
       input = gets.strip.downcase
       
@@ -44,7 +42,7 @@ class JobsBoard
       sleep(0.25)
     end
     
-    puts "Enter the job number you wish to view."
+    puts "Enter the job number you wish to view. You can also close the program by typing 'exit'."
     sleep(2)
   end
   
@@ -56,6 +54,6 @@ class JobsBoard
   
   def exit_message
     sleep(0.5)
-    puts "Thanks for visiting. See you next time!"
+    puts "Thank you for visiting. See you next time!"
   end
 end
