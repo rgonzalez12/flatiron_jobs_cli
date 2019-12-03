@@ -48,7 +48,7 @@ class JobsBoard
   
   def job_info(input)
     
-    puts "#{job.title} - #{job.location} - #{job.departments} - #{job.offices} - #{job.content}. Copy and paste the link below to apply! #{job.absolute_url}"
+    puts "#{job.title} - #{job.location} - #{job.content}. Copy and paste the link below to apply! #{job.absolute_url}"
     #lists info from the specific jobs
   end
   
