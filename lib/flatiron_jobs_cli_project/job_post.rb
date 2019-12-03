@@ -3,7 +3,7 @@ class JobPost
   attr_reader :id, :absolute_url
   @@all = []
 
-  def initialize(id:, title:, location:, content:, absolute_url:)
+  def initialize(absolute_url, location, id, title, content)
     @id = id
     @title = title
     @location = location

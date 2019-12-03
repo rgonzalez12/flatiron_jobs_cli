@@ -1,4 +1,4 @@
 #!/usr/bin/env ruby
 require_relative "../lib/flatiron_jobs_cli_project.rb"
 
-JobsBoard.new.run_program
+JobsBoard.new.run
