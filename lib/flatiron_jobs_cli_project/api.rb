@@ -3,7 +3,8 @@ class API
   def fetch
     url = "https://boards-api.greenhouse.io/v1/boards/flatironschoolcareers/jobs"
     response = HTTParty.get(url)
-    response["jobs"].map do |job|
+    # puts "Found #{response['jobs'].count} jobs"
+    response["jobs"].each do |job|
       absolute_url = job["absolute_url"]
       location = job["location"]
       id = job["id"]
