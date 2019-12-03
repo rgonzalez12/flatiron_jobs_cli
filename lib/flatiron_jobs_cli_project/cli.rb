@@ -47,13 +47,16 @@ class JobsBoard
   end
   
   def job_info(input)
+    input = gets.strip.to_i
+    JobPost.(input) do |job, id|
+      puts "#{job.title} - #{job.location} - #{job.content}. Copy and paste the link below to apply! #{job.absolute_url}"
+    end
     
-    puts "#{job.title} - #{job.location} - #{job.content}. Copy and paste the link below to apply! #{job.absolute_url}"
-    #lists info from the specific jobs
   end
   
   def exit_message
     sleep(0.5)
     puts "Thank you for visiting. See you next time!"
   end
+  
 end
