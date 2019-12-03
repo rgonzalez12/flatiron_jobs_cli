@@ -12,16 +12,14 @@ class JobsBoard
 
   def menu
     input = nil
-    sleep(0.5)
     puts "To see all the current openings, type 'list jobs'."
-    sleep(0.5)
     puts "You can also close the program by typing 'exit'."
     
     while input != "exit"
 
       input = gets.strip.downcase
       
-      if input.to_i > 0
+      if input == input.to_i.to_s
         job_info(input)
       elsif input == "list jobs"
         list_all
@@ -35,25 +33,26 @@ class JobsBoard
 
   def list_all
     puts "Here are all of the current openings at Flatiron School."
-    sleep(1)
     
     JobPost.all.each.with_index do |job, i|
       puts "#{i}. #{job.title}"
     end
     
     puts "Enter the job number you wish to view. You can also close the program by typing 'exit'."
-    sleep(2)
   end
   
   def job_info(input)
-    input = gets.strip.to_i
+    input = input.strip.to_i
+    unless (0..JobPost.all.size - 1).cover?(input)
+      puts "Invalid job number. Please enter a number between 0 - #{JobPost.all.size - 1}."
+      return
+    end
     job = JobPost.all[input]
     puts "#{job.title} - #{job.location} - #{job.content}. Copy and paste the link below to apply! #{job.absolute_url}"
     puts "You can view another job by typing 'list jobs' or 'exit' to leave."
   end
   
   def exit_message
-    sleep(0.5)
     puts "Thank you for visiting. See you next time!"
   end
   
