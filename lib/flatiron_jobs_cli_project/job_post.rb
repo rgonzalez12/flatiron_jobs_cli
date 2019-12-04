@@ -1,4 +1,5 @@
 class JobPost
+  
   attr_accessor :title, :location, :content
   attr_reader :id, :absolute_url
   @@all = []
@@ -15,4 +16,5 @@ class JobPost
   def self.all
     @@all
   end
+  
 end

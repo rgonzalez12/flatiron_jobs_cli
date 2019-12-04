@@ -14,9 +14,9 @@ class JobsBoard
   def menu
     input = nil
     puts "To see all the current openings, type 'list jobs'.".light_white.bold
-    sleep(0.5)
-    puts "You can close the program by typing 'exit'.".light_white.bold
     sleep(0.75)
+    puts "You can close the program by typing 'exit'.".light_white.bold
+    sleep(1)
     puts "What would you like to do?".light_white.bold
     
     while input != "exit"
