@@ -3,4 +3,4 @@ require_relative "../lib/flatiron_jobs_cli_project.rb"
 
 JobsBoard.new.run
 
-# After downloading/cloning my CLI gem, run the program using 'ruby bin/run'
+# I hope you enjoy reviewing my first project. Shoutout to the fabulous 5; teamwork makes the dream work. Special thanks to Madeline for guiding us to victory. 
