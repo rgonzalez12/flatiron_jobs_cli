@@ -1,7 +1,8 @@
 class API
-
+  
+  BASE_URL = "https://boards-api.greenhouse.io/v1/boards/"
   def fetch
-    url = "https://boards-api.greenhouse.io/v1/boards/flatironschoolcareers/jobs"
+    url = BASE_URL + "flatironschoolcareers/jobs"
     response = HTTParty.get(url)
     # puts "Found #{response['jobs'].count} jobs" - tester method to check for total object count
     response["jobs"].each do |job|
@@ -15,7 +16,7 @@ class API
   end
   
   def job_info(id)
-    url ="https://boards-api.greenhouse.io/v1/boards/flatironschoolcareers/jobs/#{id}"
+    url = BASE_URL + "flatironschoolcareers/jobs/#{id}"
     response = HTTParty.get(url)
     response_content = Nokogiri::HTML(response["content"]).text.gsub(/<\/?[^>]*>/, "").strip
     response_content
