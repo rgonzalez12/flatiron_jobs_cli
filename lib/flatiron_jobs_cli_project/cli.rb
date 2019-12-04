@@ -3,12 +3,12 @@ class JobsBoard
   def run
     API.new.fetch
     welcome
-    sleep(1)
     menu
   end
   
   def welcome
-    puts "Welcome to Flatiron School's Careers Page!".light_cyan.bold
+    puts "Welcome to Flatiron School's Careers Page!".light_white.bold
+    puts "==========================================".light_cyan.bold
   end
 
   def menu
@@ -68,7 +68,7 @@ class JobsBoard
   end
   
   def exit_message
-    puts "Thanks for considering Flatiron School. See you next time!".light_cyan.bold
+    puts "Thanks for considering Flatiron School. See you next time!".light_white.bold
   end
   
 end
