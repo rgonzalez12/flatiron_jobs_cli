@@ -1,6 +1,7 @@
 require 'pry'
 require 'httparty'
 require 'nokogiri'
+require 'colorize'
 
 require_relative "flatiron_jobs_cli_project/version"
 require_relative "flatiron_jobs_cli_project/job_post"
