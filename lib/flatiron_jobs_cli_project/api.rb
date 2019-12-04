@@ -1,3 +1,5 @@
+require 'nokogiri';
+
 class API
 
   def fetch
@@ -17,7 +19,14 @@ class API
   def job_info(id)
     url ="https://boards-api.greenhouse.io/v1/boards/flatironschoolcareers/jobs/#{id}"
     response = HTTParty.get(url)
-    response["content"]
+    response_content = Nokogiri::HTML(response["content"]).text.gsub(/<\/?[^>]*>/, "").strip
+    parsed_response = parse_string(response_content)
+    
+    parsed_response
+  end
+  
+  def parse_string(response_content)
+    
   end
   
 end
