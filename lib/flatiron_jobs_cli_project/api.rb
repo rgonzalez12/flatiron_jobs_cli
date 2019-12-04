@@ -7,7 +7,7 @@ class API
     # puts "Found #{response['jobs'].count} jobs" - tester method to check for total object count
     response["jobs"].each do |job|
       absolute_url = job["absolute_url"]
-      location = job["location"]
+      location = job["location"]["name"]
       id = job["id"]
       title = job["title"]
       content = self.job_info(id)

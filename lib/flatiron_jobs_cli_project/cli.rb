@@ -41,16 +41,16 @@ class JobsBoard
     puts "========================================================".light_cyan.bold
     
     JobPost.all.each.with_index do |job, i|
-      puts "#{i}. #{job.title}".light_white
+      puts "#{i + 1}. #{job.title}".light_white
     end
     puts "\n===============================================================================".light_cyan.bold
     puts "Enter the job number you wish to view. You can also close the program by typing 'exit'.".light_white.bold
   end
   
   def job_info(input)
-    input = input.strip.to_i
+    input = input.strip.to_i - 1
     unless (0..JobPost.all.size - 1).cover?(input)
-      puts "Invalid job number. Please enter a number between 0 - #{JobPost.all.size - 1}.".red.bold
+      puts "Invalid job number. Please enter a number between 1 - #{JobPost.all.size}.".red.bold
       return
     end
     job = JobPost.all[input]
