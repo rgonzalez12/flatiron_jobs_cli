@@ -5,11 +5,15 @@ class JobPost
   @@all = []
 
   def initialize(absolute_url, location, id, title, content)
+    @absolute_url = absolute_url
+    @location = location
     @id = id
     @title = title
-    @location = location
     @content = content
-    @absolute_url = absolute_url
+    save
+  end
+  
+  def save
     @@all << self
   end
 

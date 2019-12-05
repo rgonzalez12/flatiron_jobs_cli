@@ -12,7 +12,6 @@ class API
       title = job["title"]
       content = self.job_info(id)
       JobPost.new(absolute_url, location, id, title, content)
-      # puts "Found #{response['jobs'].count} jobs" - tester method to check for total object count
     end
   end
   
@@ -21,6 +20,12 @@ class API
     response = HTTParty.get(url)
     response_content = Nokogiri::HTML(response["content"]).text.gsub(/<\/?[^>]*>/, "").strip
     response_content
+  end
+  
+  private 
+  
+  def object_total
+    puts "#{response['jobs'].count} objects created"
   end
   
 end
