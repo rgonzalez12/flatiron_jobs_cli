@@ -14,9 +14,7 @@ class JobsBoard
   def menu
     input = nil
     puts "To see all the current openings, type 'list jobs'.".light_white.bold
-    sleep(0.75)
     puts "You can close the program by typing 'exit'.".light_white.bold
-    sleep(1)
     puts "What would you like to do?".light_white.bold
     
     while input != "exit"
@@ -43,14 +41,15 @@ class JobsBoard
     JobPost.all.each.with_index do |job, i|
       puts "#{i + 1}. #{job.title}".light_white
     end
-    puts "\n===============================================================================".light_cyan.bold
+    puts "\n===============================================================================\n".light_cyan.bold
     puts "Enter the job number you wish to view. You can also close the program by typing 'exit'.".light_white.bold
   end
   
   def job_info(input)
     input = input.strip.to_i - 1
     unless (0..JobPost.all.size - 1).cover?(input)
-      puts "Invalid job number. Please enter a number between 1 - #{JobPost.all.size}.".red.bold
+      puts "\nInvalid job number. Please enter a number between 1 - #{JobPost.all.size}.\n".red.bold
+      puts "You can also type 'list jobs' to see this list again, or 'exit' to leave.".red.bold
       return
     end
     job = JobPost.all[input]
