@@ -1,8 +1,8 @@
-# FlatironJobsCliProject
+# Flatiron Jobs CLI Project By R. Alexander
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/flatiron_jobs_cli_project`. To experiment with that code, run `bin/console` for an interactive prompt.
+This gem is a portfolio project to provide jobs pulled from Flatiron School's careers page in an easy to use, CLI. The gem provides automatically updated job information from the Applicant Tracking Software created by Greenhouse.io and their API. This program is the first version of the gem "0.1.0".
 
-TODO: Delete this and the text above, and describe your gem
+Please note: I created this to where it can be repurposed to fit any company that uses Greenhouse.io as their ATS. With slight modifications in the API and CLI files, you can integrate this quite easily and quickly to fit your needs. Feel free to submit any feedback, or if you would like to help contribute, please email me directly at "ghost@ralexander.io."
 
 ## Installation
 
@@ -22,7 +22,26 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+You will access the program by opening the repo, then moving into the main directory:
+
+    $ cd flatiron_jobs_cli_project
+
+While in the directory type the following into your terminal to run the program:
+
+```ruby
+ruby bin/run
+```
+
+You will be greeted followed by two options to choose from:
+
+    $ 'list jobs'
+    $ 'exit'
+    
+'List Jobs' will generate current job openings. From there, you can see a numbered list of the total jobs in which you can supply a number to view a specific post. 
+
+The number entered displays the title and location of the selected job, followed by the job description and qualifications — further context about Flatiron School or the additional information also shows when set.
+
+You can then view another job by number, list all of the jobs again, or exit the program to leave. Enjoy the job search!
 
 ## Development
 
