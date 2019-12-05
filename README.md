@@ -1,4 +1,4 @@
-# Flatiron Jobs CLI Project By R. Alexander
+# Flatiron Jobs CLI Project by R. Alexander
 
 This gem is a portfolio project to provide jobs pulled from Flatiron School's careers page in an easy to use, CLI. The gem provides automatically updated job information from the Applicant Tracking Software created by Greenhouse.io and their API. This program is the first version of the gem "0.1.0".
 
@@ -22,7 +22,7 @@ Or install it yourself as:
 
 ## Usage
 
-You will access the program by opening the repo, then moving into the main directory:
+You can access the program by cloning the repo, opening in an editor and then moving into the main directory:
 
     $ cd flatiron_jobs_cli_project
 
@@ -32,7 +32,7 @@ While in the directory type the following into your terminal to run the program:
 ruby bin/run
 ```
 
-You will be greeted followed by two options to choose from:
+You will be greeted followed by two options to navigate from:
 
     $ 'list jobs'
     $ 'exit'
