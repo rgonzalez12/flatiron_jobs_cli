@@ -10,10 +10,6 @@ class JobPost
     @id = id
     @title = title
     @content = content
-    save
-  end
-  
-  def save
     @@all << self
   end
 
