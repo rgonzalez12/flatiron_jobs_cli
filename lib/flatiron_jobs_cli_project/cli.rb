@@ -1,5 +1,11 @@
 class JobsBoard
   
+  attr_accessor :business
+  
+  def initialize(business="Flatiron School")
+    @business = business
+  end
+  
   def run
     API.new.fetch
     welcome
@@ -7,7 +13,6 @@ class JobsBoard
   end
   
   def welcome
-    business = "Flatiron School"
     puts "Welcome to #{business}'s Careers Page!".light_white.bold
     puts "==========================================".light_cyan.bold
   end
@@ -36,7 +41,6 @@ class JobsBoard
   end
 
   def list_all
-    business = "Flatiron School"
     puts "Here are all of the current openings at #{business}:".light_white.bold
     puts "========================================================".light_cyan.bold
     
@@ -69,7 +73,6 @@ class JobsBoard
   end
   
   def exit_message
-    business = "Flatiron School"
     puts "Thanks for considering #{business}. See you next time!".light_white.bold
   end
   
