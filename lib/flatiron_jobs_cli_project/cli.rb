@@ -7,7 +7,8 @@ class JobsBoard
   end
   
   def welcome
-    puts "Welcome to Flatiron School's Careers Page!".light_white.bold
+    business = "Flatiron School"
+    puts "Welcome to #{business}'s Careers Page!".light_white.bold
     puts "==========================================".light_cyan.bold
   end
 
@@ -35,7 +36,8 @@ class JobsBoard
   end
 
   def list_all
-    puts "Here are all of the current openings at Flatiron School:".light_white.bold
+    business = "Flatiron School"
+    puts "Here are all of the current openings at #{business}:".light_white.bold
     puts "========================================================".light_cyan.bold
     
     JobPost.all.each.with_index do |job, i|
@@ -67,7 +69,8 @@ class JobsBoard
   end
   
   def exit_message
-    puts "Thanks for considering Flatiron School. See you next time!".light_white.bold
+    business = "Flatiron School"
+    puts "Thanks for considering #{business}. See you next time!".light_white.bold
   end
   
 end
