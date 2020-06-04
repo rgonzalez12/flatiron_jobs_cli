@@ -1,4 +1,4 @@
-require 'pry'
+
 require 'httparty'
 require 'nokogiri'
 require 'colorize'

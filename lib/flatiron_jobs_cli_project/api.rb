@@ -2,7 +2,7 @@ class API
   
   attr_accessor :company_id
   
-  def initialize(company_id="flatironschoolcareers")
+  def initialize(company_id="flatironschoolcareers2")
     @company_id = company_id
   end
   
